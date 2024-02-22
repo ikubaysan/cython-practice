@@ -10,9 +10,9 @@ from modules.sum_list import sum_list_cy, sum_list_py
 numbers = list(range(1000000))
 
 # Time the Python version
-py_time = timeit.timeit('sum_list_py(numbers)', globals=globals(), number=100)
+py_time = timeit.timeit(lambda: sum_list_py(numbers), number=100)
 print(f"Python version took {py_time:.4f} seconds")
 
 # Time the Cython version
-cy_time = timeit.timeit('sum_list_cy(numbers)', globals=globals(), number=100)
+cy_time = timeit.timeit(lambda: sum_list_cy(numbers), number=100)
 print(f"Cython version took {cy_time:.4f} seconds")

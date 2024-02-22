@@ -1,0 +1,16 @@
+# profile_sum.py
+
+import timeit
+from sum_list import sum_list_py
+from sum_list import sum_list_cy
+
+# Create a large list of numbers
+numbers = list(range(1000000))
+
+# Time the Python version
+py_time = timeit.timeit('sum_list_py(numbers)', globals=globals(), number=100)
+print(f"Python version took {py_time:.4f} seconds")
+
+# Time the Cython version
+cy_time = timeit.timeit('sum_list_cy(numbers)', globals=globals(), number=100)
+print(f"Cython version took {cy_time:.4f} seconds")

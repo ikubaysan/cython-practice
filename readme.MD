@@ -9,3 +9,6 @@ Install requirements:
 
 Compile the pyx:
 `python setup.py build_ext --inplace`
+
+Run a profile script:
+`python profile_scripts/profile_sum.py`

@@ -1,8 +1,10 @@
-# profile_sum.py
-
 import timeit
-from sum_list import sum_list_py
-from sum_list import sum_list_cy
+import os
+
+cwd = os.getcwd()
+print(f"Current working directory: {cwd}")
+
+from modules.sum_list import sum_list_cy, sum_list_py
 
 # Create a large list of numbers
 numbers = list(range(1000000))

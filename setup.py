@@ -1,6 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from Cython.Build import cythonize
 
 setup(
-    ext_modules=cythonize("sum_list.pyx"),
+    name='cython_practice',
+    packages=find_packages(),
+    ext_modules=cythonize("modules/*.pyx"),
 )
+# 
